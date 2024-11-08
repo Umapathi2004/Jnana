@@ -6,8 +6,8 @@ const App = () => {
 
   const AddTodo = () =>{
     const id = (Todos.length?(Todos[Todos.length-1]).id+1:0) 
-    if(NewTodo.trim().length){
-    SetTodos([...Todos,{id:id,task:NewTodo}]);
+    if(NewTodo.trim()){
+    SetTodos([...Todos,{id:id,task:NewTodo.trim()}]);
     console.log(Todos)
     }
     setNewTodo("")
